@@ -2,8 +2,8 @@ var app = require("express")();
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
 
-server.listen(8081);
-console.info(`Server running in port: 8081`);
+server.listen(8080);
+console.info(`Server running in port: 8080`);
 
 io.on("connection", function(socket) {
   socket.on("join", function(data) {
