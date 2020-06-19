@@ -1,6 +1,9 @@
 var app = require("express")();
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
+var cors = require("cors");
+
+app.use(cors());
 
 server.listen(8080);
 console.info(`Server running in port: 8080`);
